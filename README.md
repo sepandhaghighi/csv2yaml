@@ -47,13 +47,17 @@
 					
 			
 
-## Usage					
+## Usage			
+				
 
 ### Command Line
 
 - Run csv2yaml with file as argument `python3 -m csv2yaml file.csv header_optional` or `python -m csv2yaml file.csv header_optional` on Mac,Linux or Windows
 
 
+<div align="center">
+<img src="csv2yaml_usage.gif" alt="csv2yaml usage" title="csv2yaml usage">
+</div>
 						
 				
 ## Automated Build				
