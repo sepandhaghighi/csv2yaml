@@ -1,4 +1,4 @@
-from .csv2json import *
+from .csv2yaml import *
 import time
 import sys
 import doctest
@@ -21,6 +21,6 @@ if __name__=="__main__":
         else:
             run(args[1])
     else:
-        print("Please pass filename to csv2json")
-        print("python -m csv2json test.csv")
+        print("Please pass filename to csv2yaml")
+        print("python -m csv2yaml test.csv")
         sys.exit()

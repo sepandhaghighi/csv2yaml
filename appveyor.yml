@@ -21,4 +21,4 @@ install:
   - "%PYTHON%/python.exe setup.py install"
 
 test_script:
-  - "%PYTHON%/python.exe -m csv2json test"
+  - "%PYTHON%/python.exe -m csv2yaml test"

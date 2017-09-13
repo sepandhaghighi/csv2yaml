@@ -10,6 +10,6 @@ install:
   - python3 setup.py install
 
 script:
-  - python3 -m csv2json test
+  - python3 -m csv2yaml test
 after_success:
   - codecov

@@ -4,7 +4,7 @@ This function get a string as input if input is one digit add a zero
 :param input_string: input digit az string
 :type input_string:str
 :return: modified output as str
->>> from csv2json import *
+>>> from csv2yaml import *
 >>> import coverage
 >>> import json
 >>> import yaml
