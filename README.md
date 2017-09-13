@@ -19,7 +19,7 @@
 <a href="https://codecov.io/gh/sepandhaghighi/csv2yaml">
   <img src="https://codecov.io/gh/sepandhaghighi/csv2yaml/branch/master/graph/badge.svg" alt="Codecov" />
 </a>
-
+<a href="https://www.codacy.com/app/sepand-haghighi/csv2yaml?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sepandhaghighi/csv2yaml&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/7a8c9902f6354a9b910ca22e35d785a2"/></a>
 </div>
 
 
