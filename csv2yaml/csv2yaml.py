@@ -42,7 +42,7 @@ def filesize(fileaddr,fileformat):
     '''
     file_info=os.stat(fileaddr+"."+fileformat)
     file_size= file_info.st_size
-    print(fileformat.upper()+" File Size : "+convert_bytes(file_size))
+    return fileformat.upper()+" File Size : "+convert_bytes(file_size)
 
 def time_convert(input_string):
     '''
@@ -60,15 +60,17 @@ def time_convert(input_string):
     input_hour=int(input_hour-input_day*24)
     return zero_insert(str(input_day))+" days, "+zero_insert(str(input_hour))+" hour, "+zero_insert(str(input_minute))+" minutes, "+zero_insert(str(input_sec))+" seconds"
 
-def json_convert(file_name):
+def json_convert(file_name,header=None):
     '''
     This function create output file in json format
     :param file_name: file name
     :type file_name:str
-    :return: None
+    :return: filesize as str
     '''
     try:
         file_name=file_name.split(".")[0]
+        if header==None:
+            header=file_name
         csv_file=open(file_name+".csv","r")
         json_file = open(file_name + ".json", "w")
         csv_lines=csv_file.readlines()
@@ -85,11 +87,11 @@ def json_convert(file_name):
                 data=data+'\n\t\t\t\t'+'"'+first_line[i]+'"'+':'+'"'+line_data+'",'
             data=data[:-1]+"\n\t\t\t},\n"
         data=data[:-2]+"\n\t\t]\n\t}\n}"
-        json_file.write('{\n\t'+'"'+json_file.name+'"'+': {\n')
+        json_file.write('{\n\t'+'"'+header+'"'+': {\n')
         json_file.write(data)
         json_file.close()
         csv_file.close()
-        filesize(file_name,"json")
+        return filesize(file_name,"json")
     except Exception as e:
         print(str(e))
         print("[Error] Bad Coversion!")
@@ -100,7 +102,7 @@ def json_to_yaml(filename):
     This function convert json file to yaml file
     :param filename: filename
     :type filename: str
-    :return: None
+    :return: filesize as str
     '''
     try:
         filename = filename.split(".")[0]
@@ -110,7 +112,7 @@ def json_to_yaml(filename):
         yaml.safe_dump(json_data,yaml_file,default_flow_style=False)
         file.close()
         yaml_file.close()
-        filesize(filename, "yaml")
+        return filesize(filename, "yaml")
     except FileNotFoundError:
         print("[Error] Bad Input File")
         sys.exit()
@@ -121,7 +123,7 @@ def json_to_pickle(filename):
     This function convert json file to yaml file
     :param filename: filename
     :type filename: str
-    :return: None
+    :return: filesize as str
     '''
     try:
         filename = filename.split(".")[0]
@@ -131,7 +133,7 @@ def json_to_pickle(filename):
         pickle.dump(json_data,pickle_file)
         pickle_file.close()
         file.close()
-        filesize(filename, "p")
+        return filesize(filename, "p")
     except FileNotFoundError:
         print("[Error] Bad Input File")
         sys.exit()

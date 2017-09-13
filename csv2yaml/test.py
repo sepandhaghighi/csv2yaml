@@ -35,28 +35,45 @@ TypeError: object of type 'int' has no len()
 Traceback (most recent call last):
         ...
 ValueError: could not convert string to float: 'sadasdasd'
->>> json_convert("test.csv")
-JSON File Size : 357.0 bytes
+>>> json_size=json_convert("test.csv")
 >>> file=open("test.json","r")
 >>> testfile_1=json.load(file)
->>> testfile_1["test.json"]["data"][1]["Node1"]
+>>> testfile_1["test"]["data"][1]["Node1"]
 '1'
->>> testfile_1["test.json"]["data"][1]["Node2"]
+>>> testfile_1["test"]["data"][1]["Node2"]
 '5'
->>> json_to_yaml("test.json")
-YAML File Size : 246.0 bytes
+>>> yaml_size=json_to_yaml("test.json")
 >>> file=open("test.yaml","r")
 >>> testfile_1_yaml=yaml.load(file)
->>> testfile_1_yaml["test.json"]["data"][1]["Node1"]
+>>> testfile_1_yaml["test"]["data"][1]["Node1"]
 '1'
->>> testfile_1_yaml["test.json"]["data"][1]["Node2"]
+>>> testfile_1_yaml["test"]["data"][1]["Node2"]
 '5'
->>> json_to_pickle("test.json")
-P File Size : 191.0 bytes
+>>> pickle_size=json_to_pickle("test.json")
 >>> testfile_1_p=pickle.load( open( "test.p", "rb" ) )
->>> testfile_1_p["test.json"]["data"][1]["Node1"]
+>>> testfile_1_p["test"]["data"][1]["Node1"]
 '1'
->>> testfile_1_p["test.json"]["data"][1]["Node2"]
+>>> testfile_1_p["test"]["data"][1]["Node2"]
+'5'
+>>> json_size=json_convert("test.csv","header_test")
+>>> file=open("test.json","r")
+>>> testfile_1=json.load(file)
+>>> testfile_1["header_test"]["data"][1]["Node1"]
+'1'
+>>> testfile_1["header_test"]["data"][1]["Node2"]
+'5'
+>>> yaml_size=json_to_yaml("test.json")
+>>> file=open("test.yaml","r")
+>>> testfile_1_yaml=yaml.load(file)
+>>> testfile_1_yaml["header_test"]["data"][1]["Node1"]
+'1'
+>>> testfile_1_yaml["header_test"]["data"][1]["Node2"]
+'5'
+>>> pickle_size=json_to_pickle("test.json")
+>>> testfile_1_p=pickle.load( open( "test.p", "rb" ) )
+>>> testfile_1_p["header_test"]["data"][1]["Node1"]
+'1'
+>>> testfile_1_p["header_test"]["data"][1]["Node2"]
 '5'
 >>> cov.stop()
 >>> cov.save()
