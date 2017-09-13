@@ -5,7 +5,7 @@ import doctest
 def run(filename):
     first_time = time.perf_counter()
     print("Converting ... ")
-    json_maker(filename)
+    json_convert(filename)
     json_to_pickle(filename)
     json_to_yaml(filename)
     second_time = time.perf_counter()

@@ -60,7 +60,7 @@ def time_convert(input_string):
     input_hour=int(input_hour-input_day*24)
     return zero_insert(str(input_day))+" days, "+zero_insert(str(input_hour))+" hour, "+zero_insert(str(input_minute))+" minutes, "+zero_insert(str(input_sec))+" seconds"
 
-def json_maker(file_name):
+def json_convert(file_name):
     '''
     This function create output file in json format
     :param file_name: file name
@@ -80,7 +80,9 @@ def json_maker(file_name):
             splited_data=csv_lines[index].split(",")
             data = data + '\n\t\t\t\t' + '"id"' + ':' + '"' + str(index) + '",'
             for i in range(len(first_line)):
-                data=data+'\n\t\t\t\t'+'"'+first_line[i]+'"'+':'+'"'+splited_data[i].replace('"','')+'",'
+                line_data=splited_data[i].replace("\n","")
+                line_data=line_data.replace('"','')
+                data=data+'\n\t\t\t\t'+'"'+first_line[i]+'"'+':'+'"'+line_data+'",'
             data=data[:-1]+"\n\t\t\t},\n"
         data=data[:-2]+"\n\t\t]\n\t}\n}"
         json_file.write('{\n\t'+'"'+json_file.name+'"'+': {\n')
