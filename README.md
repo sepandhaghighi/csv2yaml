@@ -43,7 +43,8 @@
 
 ### Command Line
 
-- Run csv2yaml with file as argument `python3 -m csv2yaml file.csv` or `python -m csv2yaml file.csv` on Mac,Linux or Windows
+- Run csv2yaml with file as argument `python3 -m csv2yaml file.csv header_optional` or `python -m csv2yaml file.csv header_optional` on Mac,Linux or Windows
+
 
 						
 				
@@ -68,8 +69,76 @@
 
 </div>	
 
+## Input File Format
+
+```
+	Key1,Key2,...,KeyN
+	Value11,Value12,...,Value1N
+	.
+	.
+	.
+	ValueN1,ValueN2,...,ValueNN
+```
 		
- 												
+## Output File Format
+
+- [JSON(.json)](https://en.wikipedia.org/wiki/JSON)
+
+	```
+		{
+		"header_name": {
+				"data":[
+				{
+					"Key1": "Value11",
+					"Key2": "Value12",
+					.
+					.
+					.
+					"KeyN": "Value1N"
+				},
+
+				.
+				.
+				.
+
+				{
+					"Key1": "ValueN1",
+					"Key2": "ValueN2",
+					.
+					.
+					.
+					"KeyN": "ValueNN"
+				},
+				]
+			}
+		}
+	```
+
+- [YAML(.yaml)](https://en.wikipedia.org/wiki/YAML)
+	```
+		header_name:
+  			data:
+			- Key1: "Value11"
+    	  	Key2: "Value12"
+    	  	.
+            .
+            .
+			KeyN: "Value1N"
+		
+			.
+			.
+			.
+
+			- Key1: "ValueN1"
+    	  	Key2: "ValueN2"
+    	  	.
+            .
+            .
+			KeyN: "ValueNN"
+
+	``` 
+
+- [Pickle(.p)](https://docs.python.org/3.5/library/pickle.html) (Binary Format)													
 ## TODO		
 
 - [x] Formats
