@@ -56,8 +56,8 @@
 </tr>
 
 <tr>
-<td><a href="https://travis-ci.org/Moduland/csv2vcf"><img src="https://travis-ci.org/Moduland/csv2vcf.svg?branch=master"></a></td>
-<td> <a href="https://ci.appveyor.com/project/sepandhaghighi/csv2vcf"><img src="https://ci.appveyor.com/api/projects/status/10tg3do98auc5slo?svg=true"></a></td>
+<td><a href="https://travis-ci.org/sepandhaghighi/csv2yaml"><img src="https://travis-ci.org/sepandhaghighi/csv2yaml.svg?branch=master"></a></td>
+<td> <a href="https://ci.appveyor.com/project/sepandhaghighi/csv2yaml"><img src="https://ci.appveyor.com/api/projects/status/4jvejgwe53nnaq3k?svg=true"></a></td>
 
 </tr>	
 
@@ -65,13 +65,7 @@
 
 </div>	
 
-			
-## Input File Format
-
-<div align="center">
-<img src="http://moduland.github.io/csv2vcf/images/csv.png">
-</div>					
-
+		
  												
 ## TODO		
 
