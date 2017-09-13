@@ -16,6 +16,9 @@
 
 
 <div align="center">
+<a href="https://codecov.io/gh/sepandhaghighi/csv2yaml">
+  <img src="https://codecov.io/gh/sepandhaghighi/csv2yaml/branch/master/graph/badge.svg" alt="Codecov" />
+</a>
 
 </div>
 
