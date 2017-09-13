@@ -35,8 +35,15 @@
 ## Installation
 ### Source Code
 - Download [Version 0.1](https://github.com/moduland/csv2yaml/archive/v0.1.zip) or [Latest Source ](https://github.com/Moduland/csv2yaml/archive/master.zip)
+- `pip3 install -r requirements.txt` or `pip install -r requirements.txt` (Need root access)	 
+- `python3 setup.py install` or `python setup.py install`	
 
-- `python3 setup.py install` or `python setup.py install`				
+
+### PyPI
+
+
+- Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
+- `pip install csv2yaml` or `pip3 install csv2yaml` (Need root access)					
 					
 			
 
