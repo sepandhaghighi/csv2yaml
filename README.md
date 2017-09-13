@@ -53,6 +53,7 @@
 ### Command Line
 
 - Run csv2yaml with file as argument `python3 -m csv2yaml file.csv header_optional` or `python -m csv2yaml file.csv header_optional` on Mac,Linux or Windows
+- Default Header : Filename
 
 
 <div align="center">
