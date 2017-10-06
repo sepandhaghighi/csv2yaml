@@ -31,11 +31,12 @@ if __name__=="__main__":
             for file in os.listdir():
                 if file.find(".csv")!=-1:
                     run(filename=file,header=file_header,error_pass=True)
+        elif args[1].upper()=="HELP":
+            help()
         elif len(args)>2:
             run(args[1],header=args[2])
         else:
             run(args[1])
     else:
-        print("Please pass filename to csv2yaml")
-        print("python -m csv2yaml test.csv header(optional)")
+        help()
         sys.exit()

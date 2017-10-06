@@ -3,7 +3,22 @@ import yaml
 import pickle
 import json
 import sys
+from art import *
 Source_dir=os.getcwd()
+version="0.2"
+def help():
+    '''
+    Print Help Page
+    :return: None
+    '''
+    tprint("csv")
+    tprint("v"+version)
+    print("Help : \n")
+    print("     - filename.csv header(optional) Example : 'python -m csv2yaml test.csv header_1'\n")
+    print("     - test (run tests)\n")
+    print("     - all  'Example : 'python -m csv2yaml all header_2'\n")
+    print("     - help (help page)'\n")
+
 
 def line(char="*",number=30):
     print(char*number)
