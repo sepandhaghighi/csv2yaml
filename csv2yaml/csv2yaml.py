@@ -40,9 +40,12 @@ def filesize(fileaddr,fileformat):
     :type fileaddr:str
     :return: file size for print as string
     '''
-    file_info=os.stat(fileaddr+"."+fileformat)
-    file_size= file_info.st_size
-    return fileformat.upper()+" File Size : "+convert_bytes(file_size)
+    try:
+        file_info=os.stat(fileaddr+"."+fileformat)
+        file_size= file_info.st_size
+        return fileformat.upper()+" File Size : "+convert_bytes(file_size)
+    except Exception as e:
+        return None
 
 def time_convert(input_string):
     '''
@@ -60,7 +63,7 @@ def time_convert(input_string):
     input_hour=int(input_hour-input_day*24)
     return zero_insert(str(input_day))+" days, "+zero_insert(str(input_hour))+" hour, "+zero_insert(str(input_minute))+" minutes, "+zero_insert(str(input_sec))+" seconds"
 
-def json_convert(file_name,header=None):
+def json_convert(file_name,header=None,error_pass=False):
     '''
     This function create output file in json format
     :param file_name: file name
@@ -93,11 +96,11 @@ def json_convert(file_name,header=None):
         csv_file.close()
         return filesize(file_name,"json")
     except Exception as e:
-        print(str(e))
-        print("[Error] Bad Coversion!")
-        sys.exit()
+        print("[Error] Json Conversion Faild!")
+        if error_pass==False:
+            sys.exit()
 
-def json_to_yaml(filename):
+def json_to_yaml(filename,error_pass=False):
     '''
     This function convert json file to yaml file
     :param filename: filename
@@ -114,11 +117,12 @@ def json_to_yaml(filename):
         yaml_file.close()
         return filesize(filename, "yaml")
     except FileNotFoundError:
-        print("[Error] Bad Input File")
-        sys.exit()
+        print("[Error] YAML Conversion Faild")
+        if error_pass==False:
+            sys.exit()
 
 
-def json_to_pickle(filename):
+def json_to_pickle(filename,error_pass=False):
     '''
     This function convert json file to yaml file
     :param filename: filename
@@ -135,8 +139,9 @@ def json_to_pickle(filename):
         file.close()
         return filesize(filename, "p")
     except FileNotFoundError:
-        print("[Error] Bad Input File")
-        sys.exit()
+        print("[Error] Pickle Conversion Faild")
+        if error_pass==False:
+            sys.exit()
 
 
 
