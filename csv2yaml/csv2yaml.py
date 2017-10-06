@@ -6,7 +6,7 @@ import sys
 from art import *
 Source_dir=os.getcwd()
 version="0.2"
-def help():
+def help_func():
     '''
     Print Help Page
     :return: None

@@ -32,11 +32,11 @@ if __name__=="__main__":
                 if file.find(".csv")!=-1:
                     run(filename=file,header=file_header,error_pass=True)
         elif args[1].upper()=="HELP":
-            help()
+            help_func()
         elif len(args)>2:
             run(args[1],header=args[2])
         else:
             run(args[1])
     else:
-        help()
+        help_func()
         sys.exit()
