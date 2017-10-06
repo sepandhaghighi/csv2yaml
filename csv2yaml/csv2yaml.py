@@ -61,7 +61,7 @@ def filesize(fileaddr,fileformat):
         file_info=os.stat(fileaddr+"."+fileformat)
         file_size= file_info.st_size
         return fileformat.upper()+" File Size : "+convert_bytes(file_size)
-    except Exception as e:
+    except Exception:
         return None
 
 def time_convert(input_string):
@@ -112,7 +112,7 @@ def json_convert(file_name,header=None,error_pass=False):
         json_file.close()
         csv_file.close()
         return filesize(file_name,"json")
-    except Exception as e:
+    except Exception:
         print("[Error] Json Conversion Faild!")
         if error_pass==False:
             sys.exit()
