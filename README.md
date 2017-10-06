@@ -34,7 +34,7 @@
 
 ## Installation
 ### Source Code
-- Download [Version 0.1](https://github.com/sepandhaghighi/csv2yaml/archive/v0.1.zip) or [Latest Source ](https://github.com/sepandhaghighi/csv2yaml/archive/master.zip)
+- Download [Version 0.2](https://github.com/sepandhaghighi/csv2yaml/archive/v0.2.zip) or [Latest Source ](https://github.com/sepandhaghighi/csv2yaml/archive/master.zip)
 - `pip3 install -r requirements.txt` or `pip install -r requirements.txt` (Need root access)	 
 - `python3 setup.py install` or `python setup.py install`	
 
