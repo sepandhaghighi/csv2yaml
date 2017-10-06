@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .csv2yaml import *
 import time
 import sys
