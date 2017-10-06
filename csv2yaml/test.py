@@ -114,6 +114,19 @@ Help :
 <BLANKLINE>
      - help (help page)'
 <BLANKLINE>
+>>> filesize('ssss','json')
+>>> json_convert('sdsdsd')
+Traceback (most recent call last):
+        ...
+SystemExit
+>>> json_to_pickle('asdsds')
+Traceback (most recent call last):
+        ...
+SystemExit
+>>> json_to_yaml('sdsdsds')
+Traceback (most recent call last):
+        ...
+SystemExit
 >>> cov.stop()
 >>> cov.save()
 
