@@ -5,6 +5,8 @@ import json
 import sys
 Source_dir=os.getcwd()
 
+def line(char="*",number=30):
+    print(char*number)
 
 def zero_insert(input_string):
     '''

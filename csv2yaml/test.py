@@ -75,6 +75,8 @@ ValueError: could not convert string to float: 'sadasdasd'
 '1'
 >>> testfile_1_p["header_test"]["data"][1]["Node2"]
 '5'
+>>> line()
+******************************
 >>> cov.stop()
 >>> cov.save()
 
